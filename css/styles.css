@@ -30,14 +30,13 @@ h1{
 }
 
 .ContFondo{
-    width: 1000px;
     height: 750px;
+    margin-bottom: 100px;
 }
 
 /* Fondo donde aparecen las tarjetas */
 .fondoTablero{
-    /* width: 90vw; */
-    height: 750px;
+    height: 100%;
     max-width: 1200px;
     background-color: #3a3a3a;
     padding: 20px;
@@ -174,6 +173,10 @@ h1{
 }
 
 @media (max-width: 480px) {
+    .ContFondo{
+        height: 1200px;
+    }
+    
     #card-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
