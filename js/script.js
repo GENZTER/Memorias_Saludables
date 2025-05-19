@@ -11,50 +11,50 @@ const hideMatchedCards = true; // Cambia a true para ocultar cartas al acertar
 
 // Lista de pares de tarjetas (puedes agregar más en el futuro)
 const cardData = [
-  { image: "/svg/calendario.png", text: "Coordinar visitas/llamadas.", recomendacion: "Crear un calendario compartido para coordinar las visitas, salidas o videollamadas." },
-  { image: "/svg/calendario.png", text: "Coordinar visitas/llamadas.", recomendacion: "Crear un calendario compartido para coordinar las visitas, salidas o videollamadas." },
+  { image: "svg/calendario.png", text: "Coordinar visitas/llamadas.", recomendacion: "Crear un calendario compartido para coordinar las visitas, salidas o videollamadas." },
+  { image: "svg/calendario.png", text: "Coordinar visitas/llamadas.", recomendacion: "Crear un calendario compartido para coordinar las visitas, salidas o videollamadas." },
 
-  { image: "/svg/cocinar.svg", text: "Cocinar juntos (1 vez/semana).", recomendacion: "Participar en la elaboración de los alimentos por lo menos una vez a la semana." },
-  { image: "/svg/cocinar.svg", text: "Cocinar juntos (1 vez/semana).", recomendacion: "Participar en la elaboración de los alimentos por lo menos una vez a la semana." },
+  { image: "svg/cocinar.svg", text: "Cocinar juntos (1 vez/semana).", recomendacion: "Participar en la elaboración de los alimentos por lo menos una vez a la semana." },
+  { image: "svg/cocinar.svg", text: "Cocinar juntos (1 vez/semana).", recomendacion: "Participar en la elaboración de los alimentos por lo menos una vez a la semana." },
 
-  { image: "/svg/leer.png", text: "Lectura en voz alta.", recomendacion: "Leer un libro juntos (lectura en voz alta)." },
-  { image: "/svg/leer.png", text: "Lectura en voz alta.", recomendacion: "Leer un libro juntos (lectura en voz alta)." },
+  { image: "svg/leer.png", text: "Lectura en voz alta.", recomendacion: "Leer un libro juntos (lectura en voz alta)." },
+  { image: "svg/leer.png", text: "Lectura en voz alta.", recomendacion: "Leer un libro juntos (lectura en voz alta)." },
 
-  { image: "/svg/fotos.svg", text: "Ver fotos/videos viejos.", recomendacion: "Ver álbumes de fotos o videos antiguos para generar conversación y recuerdos." },
-  { image: "/svg/fotos.svg", text: "Ver fotos/videos viejos.", recomendacion: "Ver álbumes de fotos o videos antiguos para generar conversación y recuerdos." },
+  { image: "svg/fotos.svg", text: "Ver fotos/videos viejos.", recomendacion: "Ver álbumes de fotos o videos antiguos para generar conversación y recuerdos." },
+  { image: "svg/fotos.svg", text: "Ver fotos/videos viejos.", recomendacion: "Ver álbumes de fotos o videos antiguos para generar conversación y recuerdos." },
 
-  { image: "/svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
-  { image: "/svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
+  { image: "svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
+  { image: "svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
 
-  { image: "/svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
-  { image: "/svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
+  { image: "svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
+  { image: "svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
   
-  { image: "/svg/parque.svg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
-  { image: "/svg/parque.svg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
+  { image: "svg/parque.svg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
+  { image: "svg/parque.svg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
 
-  { image: "/svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
-  { image: "/svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
 
-  { image: "/svg/pescado.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
-  { image: "/svg/pescado.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
+  { image: "svg/pescado.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
+  { image: "svg/pescado.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
 
-  { image: "/svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
-  { image: "/svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
+  { image: "svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
+  { image: "svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
 
-  { image: "/svg/aguacate.jpg", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
-  { image: "/svg/aguacate.jpg", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
+  { image: "svg/aguacate.jpg", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
+  { image: "svg/aguacate.jpg", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
 
-  { image: "/svg/brocoli.svg", text: "Fibra: clave para una buena digestión.", recomendacion: "Fibra: frutas, verduras, cereales integrales y legumbres." },
-  { image: "/svg/brocoli.svg", text: "Fibra: clave para una buena digestión.", recomendacion: "Fibra: frutas, verduras, cereales integrales y legumbres." },
+  { image: "svg/brocoli.svg", text: "Fibra: clave para una buena digestión.", recomendacion: "Fibra: frutas, verduras, cereales integrales y legumbres." },
+  { image: "svg/brocoli.svg", text: "Fibra: clave para una buena digestión.", recomendacion: "Fibra: frutas, verduras, cereales integrales y legumbres." },
 
-  { image: "/svg/vitamina_D.jpg", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
-  { image: "/svg/vitamina_D.jpg", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
+  { image: "svg/vitamina_D.jpg", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
+  { image: "svg/vitamina_D.jpg", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
 
-  { image: "/svg/hidratacion.svg", text: "¡A hidratarse! Agua, sopas y frutas frescas.", recomendacion: "Hidratación: agua, leche, sopas, caldos, frutas y verduras con alto contenido de agua (pepino, sandía)." },
-  { image: "/svg/hidratacion.svg", text: "¡A hidratarse! Agua, sopas y frutas frescas.", recomendacion: "Hidratación: agua, leche, sopas, caldos, frutas y verduras con alto contenido de agua (pepino, sandía)." },
+  { image: "svg/hidratacion.svg", text: "¡A hidratarse! Agua, sopas y frutas frescas.", recomendacion: "Hidratación: agua, leche, sopas, caldos, frutas y verduras con alto contenido de agua (pepino, sandía)." },
+  { image: "svg/hidratacion.svg", text: "¡A hidratarse! Agua, sopas y frutas frescas.", recomendacion: "Hidratación: agua, leche, sopas, caldos, frutas y verduras con alto contenido de agua (pepino, sandía)." },
 
-  { image: "/svg/pure.jpg", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
-  { image: "/svg/pure.jpg", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
+  { image: "svg/pure.jpg", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
+  { image: "svg/pure.jpg", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
 ];
 
 // Elementos del DOM
@@ -267,7 +267,7 @@ function updateLives(player) {
   // Añade los corazones llenos
   for (let i = 0; i < lives[player]; i++) {
     const heart = document.createElement("img");
-    heart.src = "/svg/heart-full.svg";
+    heart.src = "svg/heart-full.svg";
     heart.alt = "Vida";
     heart.classList.add("heart");
     livesContainer.appendChild(heart);
@@ -276,7 +276,7 @@ function updateLives(player) {
   // Añade los corazones vacíos
   for (let i = lives[player]; i < 7; i++) {
     const emptyHeart = document.createElement("img");
-    emptyHeart.src = "/svg/heart-empty.svg";
+    emptyHeart.src = "svg/heart-empty.svg";
     emptyHeart.alt = "Sin vida";
     emptyHeart.classList.add("heart", "lose-life");
     livesContainer.appendChild(emptyHeart);
@@ -292,7 +292,7 @@ function endGame(message, icon) {
     timer: 2000,
     background: "#f9f9f9",
     timerProgressBar: true,
-    toast: false, // Mantén esto en falso para alertas en el centro
+    toast: false, // Alertas en el centro
     position: "center",
     didClose: () => {
       // Solo recarga la página después de que se cierra la alerta
