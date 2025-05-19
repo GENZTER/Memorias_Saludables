@@ -192,17 +192,34 @@ function checkForMatch() {
     }
 }
 
-// Verificar si ambos jugadores han perdido todas sus vidas. Verificar si el juego ha terminado.
+// Verificar si el juego ha terminado.
 function checkForWin() {
+
+  // // Verificar si ambos jugadores han perdido todas sus vidas. 
   if (lives[1] <= 0 && lives[2] <= 0) {
     if (points[1] > points[2]) {
       endGame("¡El Jugador 1 gana con " + points[1] + " puntos!", "success");
     } else if (points[2] > points[1]) {
       endGame("¡El Jugador 2 gana con " + points[2] + " puntos!", "success");
-    } else {
+    } else if (points[2] == points[1]) {
+      endGame("¡EMPATE!", "success");    
+    }else {
       endGame("El juego ha terminado sin un ganador.", "info");
     }
   }
+
+  // Verificar si todos los pares han sido encontrados
+  if (pairsFound === 10) {
+    if (points[1] > points[2]) {
+      endGame("¡El Jugador 1 gana con " + points[1] + " puntos!", "success");
+    } else if (points[2] > points[1]) {
+      endGame("¡El Jugador 2 gana con " + points[2] + " puntos!", "success");
+    } else if (points[2] == points[1]) {
+      endGame("¡EMPATE!", "success");    
+    }else {
+      endGame("El juego ha terminado sin un ganador.", "info");
+    }
+  }  
 }
 
 // Mezclar tarjetas aleatoriamente
