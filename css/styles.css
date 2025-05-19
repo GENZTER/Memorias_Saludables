@@ -1,0 +1,298 @@
+:root {
+
+    /* Elements */
+    --Background: #abd1c6;
+    --Headline: #001e1d;
+    --Sub_headline: #0f3433;
+    --Card_background: #004643;
+    --Card_heading: #fffffe;
+    --Card_paragraph: #abd1c6;
+
+    /* Icons */
+    --Stroke: #001e1d;
+    --Main: #e8e4e6;
+    --Highlight: #f9bc60;
+    --Secondary: #abd1c6;
+    --Tertiary: #e16162;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1{
+    color: var(--Stroke);
+}
+.contenido{
+    background-color: var(--Background);
+}
+
+.ContFondo{
+    width: 1000px;
+    height: 750px;
+}
+
+/* Fondo donde aparecen las tarjetas */
+.fondoTablero{
+    /* width: 90vw; */
+    height: 750px;
+    max-width: 1200px;
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    background-image: url('/svg_freepik/background.jpg'); /* Fondo SVG */
+    background-size: cover;
+    background-position: center;     
+}
+
+/* Encabezado del juego */
+.game-header {
+    text-align: center;
+    color: #1f1d1d;
+    margin-bottom: 15px;
+}
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.card {
+    width: 100%;
+    height: 150px;
+    perspective: 1000px;
+    /* border: 1px solid var(--Highlight); */
+    border: hidden;
+    background: #1d77c500;    
+}
+/* Color de la carta vista trasera */
+.card-back{
+    background-color: var(--Sub_headline);
+}
+.card-inner {
+    width: 100%;
+    /* height: 100%; */
+    height: 180px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo cuando la tarjeta está volteada */
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* Cara trasera (bocabajo) */
+.card-back {
+    background-color: #555;
+}
+
+/* Cara frontal (volteada) */
+/* Ajuste para las tarjetas */
+.card-front {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+/* Imagen dentro de la tarjeta */
+.card-front img {
+    /* width: 100%; */
+    margin: auto;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    border-radius: 15px;
+    z-index: 1;
+    /* display: flex; */
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto superpuesto */
+.card-text {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(225, 97, 98, 0.8);
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    bottom: 5px;
+}
+
+/* Para que las tarjetas se vean bien en diferentes tamaños */
+@media (max-width: 768px) {
+    #card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        height: 130px;
+    }
+
+    .card-inner {
+        height: 150px;
+    }
+
+    .card-text {
+        font-size: 0.8em;
+        padding: 4px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .card {
+        height: 100px;
+    }
+
+    .card-inner {
+        height: 120px;
+    }
+
+    .card-text {
+        font-size: 0.7em;
+        padding: 3px 0;
+    }
+}
+
+
+/* Indicadores de vidas */
+#player1-lives, #player2-lives {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Indicador de turno */
+#turn-indicator {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Botón de terminar juego */
+#end-game {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#end-game:hover {
+    background-color: #c9302c;
+}
+
+/* Mensaje de estado (aciertos y errores) */
+#status {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffc107;
+}
+
+/* Ocultar botón de fin de juego al iniciar */
+#end-game {
+    display: none;
+}
+
+
+/* Estilos para los corazones */
+.heart {
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+}
+
+
+/* Animación para los corazones cuando se pierde una vida */
+.heart.lose-life {
+    animation: heartBeat 0.5s ease forwards;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+/* Estilos para los corazones */
+.heart {
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación para corazones perdidos */
+.lose-life {
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+
+/* Animación para el boton de información del programa */
+.info-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #f9bc60;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+.info-button img {
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}

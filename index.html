@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorias saludables</title>
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <!-- Estilos págna -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Mensajes personalisados -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Estilos de la página -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="contenido">
+    
+    <div class="container text-center">
+
+        <div style="padding: 35px 0;">
+            <h1>Memorias saludables</h1>
+        </div>
+    
+        <!-- Infromación de la partida -->
+        <div class="row mb-3 text-center">
+            <div class="col-6 col-sm-4 themed-grid-col">
+                <!-- Jugador 1 -->
+                <div>
+                    <h4>Jugador 1</h4>
+                    <div id="player1-lives" class="lives"></div>
+                    <span id="player1-points">0 puntos</span><br>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 themed-grid-col">
+                <span id="turn-indicator">Turno de Jugador 1</span>
+                <!-- Botones -->
+                <div>
+                    <button class="btn btn-primary w-100 mt-3" id="new-game">Nuevo Juego</button>
+                    <button class="btn btn-danger w-100 mt-3" id="end-game" style="display:none;">Terminar Juego</button>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-4 themed-grid-col">
+                <!-- Jugador 2 -->
+                <div>
+                    <h4>Jugador 2</h4>
+                    <div id="player2-lives" class="lives"></div>
+                    <span id="player2-points">0 puntos</span><br>
+                </div>
+            </div>
+
+        </div>         
+
+
+        <!-- Contenedor para las tarjeas. -->
+        <div class="container text-center themed-grid-col ContFondo">
+            
+            <div class="fondoTablero">
+
+                <div class="game-container">
+                    <div class="status" id="status"></div>
+                    <div class="card-container" id="card-container"></div>                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Botón de información -->
+    <div id="info-button" class="info-button">
+        <img src="/svg/info.svg" alt="Información del juego" />
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
