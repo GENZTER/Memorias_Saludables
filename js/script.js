@@ -344,8 +344,9 @@ document.getElementById("info-button").addEventListener("click", () => {
         html: `
             <p style="color: #e16162; font-size:25px"><strong>UACM</strong></p>
             <p><strong>Lanzamiento:</strong> 18 Mayo 2025</p>
-            <p><strong>Autores:</strong> Ramírez Guzmán Iris Ariadna</p>
-            <p><strong>materia:</strong> Nutrición comunitaria</p>
+            <p><strong>Autora:</strong> Ramírez Guzmán Iris Ariadna</p>
+            <p><strong>Desarrollador:</strong> Rodríguez Cervantes Kevin Manzur</p>
+            <p><strong>Materia:</strong> Nutrición comunitaria</p>
             <h4>🖼️ Fuentes de iconos:</h4>
             <ul style="text-align: left;">
                 <li><a href="https://www.flaticon.com/" target="_blank" style="color: #001e1d;">Flaticon</a></li>
