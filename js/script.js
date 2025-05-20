@@ -35,8 +35,8 @@ const cardData = [
   { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
   { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
 
-  { image: "svg/pescado.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
-  { image: "svg/pescado.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
+  { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
+  { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
 
   { image: "svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
   { image: "svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
