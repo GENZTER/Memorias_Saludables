@@ -29,11 +29,11 @@ const cardData = [
   { image: "svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
   { image: "svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
   
-  { image: "svg/parque.svg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
-  { image: "svg/parque.svg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
+  { image: "svg/parque.jpg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
+  { image: "svg/parque.jpg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
 
-  { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
-  { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando2.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando2.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
 
   { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
   { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
