@@ -26,14 +26,14 @@ const cardData = [
   { image: "svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
   { image: "svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
 
-  { image: "svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
-  { image: "svg/conversando.svg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
+  { image: "svg/conversando.jpg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
+  { image: "svg/conversando.jpg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
   
   { image: "svg/parque.jpg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
   { image: "svg/parque.jpg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
 
-  { image: "svg/hablando2.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
-  { image: "svg/hablando2.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando3.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando3.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
 
   { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
   { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
