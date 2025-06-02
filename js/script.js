@@ -1,9 +1,9 @@
 // Variables del juego
-let cards = [];
+let cards = [];// Array de cartas
 let flippedCards = [];
-let playerTurn = 1;
-let lives = { 1: 7, 2: 7 };
-let points = { 1: 0, 2: 0 };
+let playerTurn = 1;// Jugador que inicia la partida
+let lives = { 1: 7, 2: 7 };// Vidas de cadajugador
+let points = { 1: 0, 2: 0 };// Puntos de cada jugador
 let pairsFound = 0;
 
 // Nuevo: Configuración para ocultar cartas al acertar
@@ -23,17 +23,17 @@ const cardData = [
   { image: "svg/fotos.svg", text: "Ver fotos/videos viejos.", recomendacion: "Ver álbumes de fotos o videos antiguos para generar conversación y recuerdos." },
   { image: "svg/fotos.svg", text: "Ver fotos/videos viejos.", recomendacion: "Ver álbumes de fotos o videos antiguos para generar conversación y recuerdos." },
 
-  { image: "svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
-  { image: "svg/pintar.jpg", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
+  { image: "svg/pintar.png", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
+  { image: "svg/pintar.png", text: "Tareas ligeras (si puede).", recomendacion: "Si la persona adulta mayor puede, asignarle tareas ligeras y significativas (ej. preparación para eventos familiares, doblar ropa)." },
 
-  { image: "svg/conversando.jpg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
-  { image: "svg/conversando.jpg", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
+  { image: "svg/conversando.png", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
+  { image: "svg/conversando.png", text: "Paciencia y escucha.", recomendacion: "Tener paciencia y escucha activa." },
   
-  { image: "svg/parque.jpg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
-  { image: "svg/parque.jpg", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
+  { image: "svg/parque.png", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
+  { image: "svg/parque.png", text: "Salir a caminar.", recomendacion: "Salir a caminar juntos." },
 
-  { image: "svg/hablando3.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
-  { image: "svg/hablando3.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
+  { image: "svg/hablando.svg", text: "Hablar de sus comidas.", recomendacion: "Hablar sobre sus comidas preferidas." },
 
   { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
   { image: "svg/huevo.svg", text: "Proteínas: vitales para la fuerza muscular.", recomendacion: "Proteínas: pechuga de pollo, espaldilla de res, pescado, huevos, legumbres." },
@@ -41,32 +41,35 @@ const cardData = [
   { image: "svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
   { image: "svg/manzana.svg", text: "Energía duradera con granos, frutas y verduras.", recomendacion: "Carbohidratos complejos: granos integrales (avena, arroz, quinoa), frutas y verduras." },
 
-  { image: "svg/aguacate.jpg", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
-  { image: "svg/aguacate.jpg", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
+  { image: "svg/aguacate.png", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
+  { image: "svg/aguacate.png", text: "Grasas buenas para el corazón y el cerebro.", recomendacion: "Grasas saludables: aguacate, aceite de oliva, frutos secos, pescados grasos (salmón, atún, sardina)." },
 
   { image: "svg/brocoli.svg", text: "Fibra: clave para una buena digestión.", recomendacion: "Fibra: frutas, verduras, cereales integrales y legumbres." },
   { image: "svg/brocoli.svg", text: "Fibra: clave para una buena digestión.", recomendacion: "Fibra: frutas, verduras, cereales integrales y legumbres." },
 
-  { image: "svg/vitamina_D.jpg", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
-  { image: "svg/vitamina_D.jpg", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
+  { image: "svg/vitamina_D.png", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
+  { image: "svg/vitamina_D.png", text: "Calcio y Vitamina D para huesos fuertes.", recomendacion: "Calcio y vitamina D: lácteos, verduras de hoja verde oscura (brócoli), exposición solar." },
 
   { image: "svg/hidratacion.svg", text: "¡A hidratarse! Agua, sopas y frutas frescas.", recomendacion: "Hidratación: agua, leche, sopas, caldos, frutas y verduras con alto contenido de agua (pepino, sandía)." },
   { image: "svg/hidratacion.svg", text: "¡A hidratarse! Agua, sopas y frutas frescas.", recomendacion: "Hidratación: agua, leche, sopas, caldos, frutas y verduras con alto contenido de agua (pepino, sandía)." },
 
-  { image: "svg/pure.jpg", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
-  { image: "svg/pure.jpg", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
+  { image: "svg/pure.png", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
+  { image: "svg/pure.png", text: "Si cuesta tragar, ¡opta por lo blandito!", recomendacion: "En caso de que las personas adultas mayores tengan dificultad para masticar o deglutir optar por comidas con consistencias blandas (caldos, purés, verduras y frutas cocidas, picados finos)." },
 ];
 
 // Elementos del DOM
-const cardContainer = document.getElementById("card-container");
-const turnIndicator = document.getElementById("turn-indicator");
+// Elementos del DOM
+const cardContainer = document.getElementById("card-container"); // Contenedor de las cartas
+const turnIndicator = document.getElementById("turn-indicator"); // Turno
 const statusMessage = document.getElementById("status");
-const player1Lives = document.getElementById("player1-lives");
-const player2Lives = document.getElementById("player2-lives");
-const player1Points = document.getElementById("player1-points");
-const player2Points = document.getElementById("player2-points");
-const newGameButton = document.getElementById("new-game");
-const endGameButton = document.getElementById("end-game");
+const player1Lives = document.getElementById("player1-lives"); // Vidas del jugador 1
+const player2Lives = document.getElementById("player2-lives"); // Vidas del jugador 2
+const player1Points = document.getElementById("player1-points"); // Puntos del jugador 1
+const player2Points = document.getElementById("player2-points"); // Puntos del jugador 2
+const player1Name = document.getElementById("player1-name"); // Nombre del jugador 1
+const player2Name = document.getElementById("player2-name"); // Nombre del jugador 2
+const newGameButton = document.getElementById("new-game"); // Boton para el nuevo juego
+const endGameButton = document.getElementById("end-game"); // Boton para terminar el juego.
 
 // Iniciar un nuevo juego
 function startNewGame() {
@@ -89,15 +92,18 @@ function startNewGame() {
     cardContainer.innerHTML = "";
     flippedCards = [];
     playerTurn = 1;
-
+  
+    // Mostramos las vidas disponibles de cada jugador
     lives = { 1: 7, 2: 7 };
     updateLives(1);
     updateLives(2);
-
+    
+    // Puntos disponibles de cada jugador
     points = { 1: 0, 2: 0 };
     pairsFound = 0;
     updatePoints();
-    updateTurnIndicator();
+    updateNames();
+    updateTurnIndicator();// Turno del jugador que inicia la partida
     statusMessage.textContent = "";
     endGameButton.style.display = "block";
 
@@ -237,6 +243,12 @@ function updatePoints() {
   player2Points.textContent = `${points[2]} puntos`;
 }
 
+// Muestra los jugadores
+function updateNames() {
+  player1Name.textContent = `Jugador 1`;
+  player2Name.textContent = `Jugador 2`;
+}
+
 // Actualizar el indicador de turno
 function toggleTurn() {
   playerTurn = playerTurn === 1 ? 2 : 1;
@@ -342,17 +354,31 @@ document.getElementById("info-button").addEventListener("click", () => {
         title: "<strong>Memorias saludables</strong>",
         icon: "info",
         html: `
-            <p style="color: #e16162; font-size:25px"><strong>UACM</strong></p>
-            <p><strong>Lanzamiento:</strong> 18 Mayo 2025</p>
-            <p><strong>Autora:</strong> Ramírez Guzmán Iris Ariadna</p>
-            <p><strong>Desarrollador:</strong> Rodríguez Cervantes Kevin Manzur</p>
-            <p><strong>Materia:</strong> Nutrición comunitaria</p>
-            <h4>🖼️ Fuentes de iconos:</h4>
-            <ul style="text-align: left;">
-                <li><a href="https://www.flaticon.com/" target="_blank" style="color: #001e1d;">Flaticon</a></li>
-                <li><a href="http://www.freepik.es/" target="_blank" style="color: #001e1d;">Freepik</a></li>
-                <li><a href="https://www.svgrepo.com/" target="_blank" style="color: #001e1d;">SVG Repo</a></li>
-            </ul>
+          <div class="row mb-3 text-center">
+            <div class="col-12 themed-grid-col"><p style="color: #e16162; font-size:35px"><strong>UACM</strong></p></div>
+            <div class="col-12 themed-grid-col"><p style="color: #001e1d; font-size:20px">Licenciatura en Nutrición y Salud</p></div>
+            <div class="col-12 themed-grid-col"><p style="color: #001e1d; font-size:20px">Nutrición comunitaria</p></div>
+          </div>  
+
+          <div class="row mb-3 text-center">
+            <div class="col-12 themed-grid-col"><strong>Autora:</strong></div>
+            <div class="col-12 themed-grid-col">Ramírez Guzmán Iris Ariadna</div>
+          </div>       
+
+          <div class="row mb-3 text-center">
+            <div class="col-12 themed-grid-col"><strong>Desarrollador:</strong></div>
+            <div class="col-12 themed-grid-col">Rodríguez Cervantes Kevin Manzur</div>
+          </div>           
+
+          <h4>🖼️ Fuentes de iconos:</h4>
+          <ul style="text-align: left;">
+              <li><a href="https://www.flaticon.com/" target="_blank" style="color: #001e1d;">Flaticon</a></li>
+              <li><a href="http://www.freepik.es/" target="_blank" style="color: #001e1d;">Freepik</a></li>
+              <li><a href="https://www.svgrepo.com/" target="_blank" style="color: #001e1d;">SVG Repo</a></li>
+          </ul>
+          <div class="row mb-3 text-center">
+            <div class="col-12 themed-grid-col">Versión: Beta 2.50 Lanzado:02-Junio-2025</div>
+          </div>  
         `,
         showCloseButton: true,
         focusConfirm: false,
