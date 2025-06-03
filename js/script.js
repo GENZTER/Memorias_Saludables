@@ -408,7 +408,7 @@ document.getElementById("encuesta-button").addEventListener("click", () => {
     Swal.fire({
         title: "Encuesta",
         html: `
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsolmIHdj3_r6XQxhd57m9PByL3lA3smsUu7tySF3FpXdqnQ/viewform?embedded=true"
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhUA-QKP-sLR_jrAclZFBvdxrfYFsaoXTafmqc-9m7sQRzoQ/viewform?usp=header"
                     width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">
                 Cargando…
             </iframe>
