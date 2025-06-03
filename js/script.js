@@ -390,7 +390,7 @@ document.getElementById("info-button").addEventListener("click", () => {
 });
 
 // Evento para mostrar la encuesta
-/*
+
 document.getElementById("encuesta-button").addEventListener("click", () => {
     const yaRespondio = localStorage.getItem("encuestaRespondida");
 
@@ -439,4 +439,4 @@ document.getElementById("encuesta-button").addEventListener("click", () => {
         }
     });
 });
-*/
+
