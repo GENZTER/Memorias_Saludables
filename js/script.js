@@ -377,7 +377,7 @@ document.getElementById("info-button").addEventListener("click", () => {
               <li><a href="https://www.svgrepo.com/" target="_blank" style="color: #001e1d;">SVG Repo</a></li>
           </ul>
           <div class="row mb-3 text-center">
-            <div class="col-12 themed-grid-col">Versión: Beta 2.50 Lanzado:02-Junio-2025</div>
+            <div class="col-12 themed-grid-col">Versión: 2.50 Lanzado:02-Junio-2025</div>
           </div>  
         `,
         showCloseButton: true,
@@ -388,3 +388,55 @@ document.getElementById("info-button").addEventListener("click", () => {
         padding: "20px",
     });
 });
+
+// Evento para mostrar la encuesta
+/*
+document.getElementById("encuesta-button").addEventListener("click", () => {
+    const yaRespondio = localStorage.getItem("encuestaRespondida");
+
+    if (yaRespondio === "true") {
+        Swal.fire({
+            icon: "info",
+            title: "¡Encuesta ya contestada!",
+            text: "Gracias por tu participación. Ya has respondido esta encuesta.",
+            timer: 3000,
+            showConfirmButton: false,
+        });
+        return;
+    }
+
+    Swal.fire({
+        title: "Encuesta",
+        html: `
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdsolmIHdj3_r6XQxhd57m9PByL3lA3smsUu7tySF3FpXdqnQ/viewform?embedded=true"
+                    width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">
+                Cargando…
+            </iframe>
+            <p style="margin-top:10px; font-size:14px; color:#555;">
+                Una vez que hayas completado la encuesta, presiona el botón "Ya la respondí".
+            </p>
+        `,
+        width: 600,
+        showCloseButton: true,
+        showCancelButton: true,
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Ya la respondí",
+        background: "#e8e4e6",
+        padding: "17px",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Marca como respondida
+            localStorage.setItem("encuestaRespondida", "true");
+
+            // Mostrar mensaje de agradecimiento
+            Swal.fire({
+                icon: "success",
+                title: "¡Gracias!",
+                text: "Tu respuesta ha sido registrada. Agradecemos tu tiempo.",
+                timer: 3000,
+                showConfirmButton: false,
+            });
+        }
+    });
+});
+*/
