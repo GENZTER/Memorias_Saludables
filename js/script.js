@@ -180,6 +180,8 @@ function checkForMatch() {
                 flippedCards = [];
                 updatePoints();
                 checkForWin();
+                // Verificamos el puntaje de los jugadores
+                puntosGanar();               
             });
         }
     } else {
@@ -227,6 +229,20 @@ function checkForWin() {
     }
   }  
 }
+
+// Verifica si algunos de los jugadores ya tiene 5 puntos, termina la partida
+function puntosGanar() {
+  // Verifica si algunos de los jugadores ya tiene 5 puntos, termina la partida
+  
+  // console.log("Funcion");
+  // console.log(points[1] + " == " + points[2]);
+
+  if (points[1] == 5) {
+    endGame("¡El Jugador 1 gana con " + points[1] + " puntos!", "success");
+  } else if (points[2] == 5) {
+    endGame("¡El Jugador 2 gana con " + points[1] + " puntos!", "success");
+  }
+} 
 
 // Mezclar tarjetas aleatoriamente
 function shuffle(array) {
@@ -377,7 +393,7 @@ document.getElementById("info-button").addEventListener("click", () => {
               <li><a href="https://www.svgrepo.com/" target="_blank" style="color: #001e1d;">SVG Repo</a></li>
           </ul>
           <div class="row mb-3 text-center">
-            <div class="col-12 themed-grid-col">Versión: 2.50 Lanzado:02-Junio-2025</div>
+            <div class="col-12 themed-grid-col">Versión: 2.70 Lanzado:06-Junio-2025</div>
           </div>  
         `,
         showCloseButton: true,
@@ -408,7 +424,7 @@ document.getElementById("encuesta-button").addEventListener("click", () => {
     Swal.fire({
         title: "Encuesta",
         html: `
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhUA-QKP-sLR_jrAclZFBvdxrfYFsaoXTafmqc-9m7sQRzoQ/viewform?usp=header"
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7jxOpp6oZst8fGPkPyZuSLXG44QV6Y6LWMtXU2P9aw-hLow/viewform"
                     width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">
                 Cargando…
             </iframe>
