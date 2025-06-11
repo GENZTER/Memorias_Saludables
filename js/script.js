@@ -383,7 +383,7 @@ document.getElementById("info-button").addEventListener("click", () => {
 
           <div class="row mb-3 text-center">
             <div class="col-12 themed-grid-col"><strong>Desarrollador:</strong></div>
-            <div class="col-12 themed-grid-col">Rodríguez Cervantes Kevin Manzur</div>
+            <div class="col-12 themed-grid-col">Ing. en Software: Rodríguez Cervantes Kevin Manzur</div>
           </div>           
 
           <h4>🖼️ Fuentes de iconos:</h4>
